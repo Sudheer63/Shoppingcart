@@ -1,0 +1,51 @@
+/* Apply responsive styles to the table */
+.table-class {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table-class th,
+.table-class td {
+    padding: 8px;
+    text-align: center;
+}
+
+.table-class th {
+    background-color: #f8f9fa;
+}
+
+.table-class tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive styles for different screen sizes using Bootstrap grid classes */
+@media (max-width: 767px) {
+    /* Stack table rows on small screens */
+    .table-class thead {
+        display: none;
+    }
+
+    .table-class tbody tr {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+
+    .table-class tbody td {
+        display: block;
+        text-align: left;
+    }
+
+    .table-class tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        float: left;
+        text-transform: uppercase;
+    }
+}
+.pricing {
+	display:flex;
+	width:100%;
+	justify-content: center;
+}
